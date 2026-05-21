@@ -40,6 +40,30 @@ window.addEventListener("scroll", () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
 });
 
+const trackGoogleEvent = (eventName, params = {}) => {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, params);
+  }
+};
+
+document.querySelectorAll('a[href^="mailto:hello@mutare.biz"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    trackGoogleEvent("generate_lead", {
+      method: "email_link",
+      event_category: "engagement"
+    });
+  });
+});
+
+document.querySelectorAll('a[href*="facebook.com/share/1DsxumNDSN"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    trackGoogleEvent("select_content", {
+      content_type: "social_link",
+      item_id: "facebook_page"
+    });
+  });
+});
+
 const form = document.querySelector("[data-contact-form]");
 
 form?.addEventListener("submit", (event) => {
@@ -62,6 +86,11 @@ form?.addEventListener("submit", (event) => {
   const mailto = new URL("mailto:hello@mutare.biz");
   mailto.searchParams.set("subject", topic);
   mailto.searchParams.set("body", body);
+
+  trackGoogleEvent("generate_lead", {
+    method: "email_form",
+    event_category: "engagement"
+  });
 
   window.location.href = mailto.toString();
 });

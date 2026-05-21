@@ -11,6 +11,15 @@
     <link rel="preload" href="brand-assets/mutare_dark_background_transparent_pngs/mutare_horizontal_dark_transparent.png" as="image">
     <link rel="preload" href="posts/generated/business-online-starter/business-online-starter-hero-v1.png" as="image">
     <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31GK8HHV76"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+
+      gtag("config", "G-31GK8HHV76");
+    </script>
   </head>
   <body>
     <header class="site-header" data-header>
@@ -29,6 +38,7 @@
         <a href="#services">Services</a>
         <a href="#payments">Payment help</a>
         <a href="#how">How it works</a>
+        <a href="https://www.facebook.com/share/1DsxumNDSN/" target="_blank" rel="noopener">Facebook</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -209,7 +219,10 @@
               Email us with what you want to set up, improve, or understand. We will
               help you choose a practical first step.
             </p>
-            <a class="email-link" href="mailto:hello@mutare.biz">hello@mutare.biz</a>
+            <div class="contact-links" aria-label="Contact links">
+              <a class="email-link" href="mailto:hello@mutare.biz">hello@mutare.biz</a>
+              <a class="social-link" href="https://www.facebook.com/share/1DsxumNDSN/" target="_blank" rel="noopener">Facebook page</a>
+            </div>
           </div>
 
           <form class="contact-form" data-contact-form>
@@ -240,7 +253,10 @@
     <footer class="site-footer">
       <img src="brand-assets/mutare_dark_background_transparent_pngs/mutare_horizontal_dark_transparent.png" alt="Mutare.biz">
       <p>Mutare Business Help Desk. Local, practical digital help.</p>
-      <a href="mailto:hello@mutare.biz">hello@mutare.biz</a>
+      <div class="footer-links">
+        <a href="mailto:hello@mutare.biz">hello@mutare.biz</a>
+        <a href="https://www.facebook.com/share/1DsxumNDSN/" target="_blank" rel="noopener">Facebook</a>
+      </div>
     </footer>
 
     <script src="script.js"></script>

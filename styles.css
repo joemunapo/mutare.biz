@@ -588,6 +588,31 @@ h3 {
   font-weight: 950;
 }
 
+.contact-links,
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
